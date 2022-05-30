@@ -13,6 +13,7 @@ public class StudentService
     {
         //imported last two lines from CompositionClass/CourseServices/CourseService.java lesson example for adding into HashMap, and adapted for the variables required for the project.
         //followed the IntelliJ recommendations for the four variables (created local variables, and then initialised via autocomplete)
+        //tested to be working.
         String id = student.getId();
         String name = student.getName();
         String email = student.getEmail();
@@ -23,7 +24,7 @@ public class StudentService
 
     public Student findStudent( String studentId )
     {
-        //imported from CompositionClass.CourseServices.java lesson example. it... yeah. works.
+        //imported from CompositionClass/CourseServices/CourseService.java lesson example. tested to be working.
         Student searchResult = students.get(studentId);
         if (searchResult != null) {
             return searchResult;
@@ -39,6 +40,18 @@ public class StudentService
 
     public void enrollToCourse( String studentId, Course course )
     {
-        //TODO
+        //imported and adapted from CompositionClass/CourseServices/CourseService.java lesson example. unable to resolve errors.
+        //cannot be tested
+        if(students.get(studentId)==null){
+            System.out.println("Enroll Failed. Student could not be found.");
+        }
+        else if(Course.get(course)==null){
+            System.out.println("Enroll Failed. Course could not be found.");
+        }
+        else {
+            Student student = students.get(studentId);
+            Course course = Course.get(course);
+            student.enrollToCourse(course);
+        }
     }
 }

@@ -1,5 +1,6 @@
 package com.generation.model;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -17,7 +18,11 @@ public class Student
 
     public void enrollToCourse( Course course )
     {
-        //TODO
+        //No idea what I'm doing here honestly. I figured that enrolledCourses.add(course) was necessary, but I don't know how to resolve the errors from adding it in.
+        //cannot be tested
+        //ArrayList<Course> enrolledCourses;
+        //enrolledCourses = new ArrayList<>();
+        enrolledCourses.add(course);
     }
 
     @Override
