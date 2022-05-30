@@ -10,7 +10,7 @@ public class Student
 
     float PASS_MIN_GRADE = 3.0f;
 
-    public Student( String id, String name, String email, Date birthDate )
+    public Student(String id, String name, String email, Date birthDate )
     {
         super( id, name, email, birthDate );
     }

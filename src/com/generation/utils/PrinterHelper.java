@@ -46,7 +46,7 @@ public class PrinterHelper
 
         Date birthDate = formatter.parse( scanner.next() );
         System.out.println( "|-------------------------------------|" );
-        Student student = new Student( id, name, email, birthDate );
+        Student student = new Student(id, name, email, birthDate);
         System.out.println( "Student Successfully Registered! " );
         System.out.println( student );
         return student;
