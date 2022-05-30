@@ -11,7 +11,7 @@ public class StudentService
 
     public void subscribeStudent( Student student )
     {
-        //imported last two lines from CompositionClass.CourseServices.CourseService.java example code for adding into HashMap, and adapted for the variables required for the project.
+        //imported last two lines from CompositionClass/CourseServices/CourseService.java lesson example for adding into HashMap, and adapted for the variables required for the project.
         //followed the IntelliJ recommendations for the four variables (created local variables, and then initialised via autocomplete)
         String id = student.getId();
         String name = student.getName();
@@ -23,7 +23,11 @@ public class StudentService
 
     public Student findStudent( String studentId )
     {
-        //TODO
+        //imported from CompositionClass.CourseServices.java lesson example. it... yeah. works.
+        Student searchResult = students.get(studentId);
+        if (searchResult != null) {
+            return searchResult;
+        }
         return null;
     }
 
