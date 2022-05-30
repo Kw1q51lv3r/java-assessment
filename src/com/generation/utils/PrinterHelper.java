@@ -42,9 +42,20 @@ public class PrinterHelper
         System.out.println( "| Enter student birth date(MM/dd/yyyy)|" );
         DateFormat formatter = new SimpleDateFormat( "MM/dd/yyyy" );
 
-        //TODO validate date format and catch exception to avoid crash
+        //adapted from ParseException example as well as the ExceptionHandling/Main.java lesson example, with added IntelliJ recommended actions (= new date())
+        //untested
+        Date birthDate = new Date();
+        try
+        {
+            birthDate = formatter.parse( scanner.next() );
+        }
+        catch (ParseException e) {
+            System.out.println("Please enter an actually properly formatted date");
+        }
+        catch (Exception e) {
+            System.out.println("An error has occurred. Please see a qualified human for more assistance.");
+        }
 
-        Date birthDate = formatter.parse( scanner.next() );
         System.out.println( "|-------------------------------------|" );
         Student student = new Student(id, name, email, birthDate);
         System.out.println( "Student Successfully Registered! " );
